@@ -1,4 +1,4 @@
-Question: Subtract Product and Sum of digits of an Integer
+/* Question: Subtract Product and Sum of digits of an Integer
 
 Given an integer number n, return the difference between the product of its digits and the sum of its digits.
  
@@ -24,4 +24,18 @@ Result = 32 - 11 = 21
 Constraints:
 
 1 <= n <= 10^5
+ /*
+
+Code: 
+
+  int subtractProductAndSum(int n) {
+        int product =1, sum=0;
+        while(n!=0){
+            int d=n%10;
+            product*=d;
+            sum+=d;
+            n/=10;
+        }
+        return (product-sum);
+    }
 
